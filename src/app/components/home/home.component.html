@@ -1,23 +1,103 @@
 <app-hero-banner></app-hero-banner>
 
-<section class="py-16 text-center bg-secondary">
+<!-- <section class="py-16 text-center bg-secondary" style="margin-top: 4%;">
   <h2 class="text-4xl font-bold mb-4">Welcome to [College Name]</h2>
   <p class="max-w-2xl mx-auto text-gray-700">Empowering students to become global leaders through innovation and excellence.</p>
-</section>
+</section> -->
 
-<section class="py-16">
-  <div class="text-center mb-10">
+<section class="py-16" style="background: linear-gradient(45deg, black, transparent);">
+  <!-- <div class="text-center mb-10">
     <h2 class="text-3xl font-bold">Explore</h2>
+  </div> -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-10" >
+     <ng-container *ngFor="let tech of technologies">
+      <app-card [title]="tech.title" [description]="tech.description" [imagePath]="tech.image"></app-card>
+    </ng-container>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-10">
-    <app-card title="Departments" description="Various academic programs to choose from." link="/departments"></app-card>
-    <app-card title="Faculty" description="Meet our experienced professors." link="/faculty"></app-card>
-    <app-card title="Admissions" description="Join us and shape your future." link="/admissions"></app-card>
+</section>
+<section class="text-white py-12" style="background-color: #1b2430;">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold">The industries we work in</h2>
+  </div>
+  <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 px-4">
+    <!-- Mining & Resources -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-hammer text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Mining & Resources</span>
+    </div>
+    
+    <!-- Medical & Healthcare -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-hospital text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Medical & Healthcare</span>
+    </div>
+    
+    <!-- Training & Education -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-graduation-cap text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Training & Education</span>
+    </div>
+    
+    <!-- Property & Real Estate -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-home text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Property & Real Estate</span>
+    </div>
+    
+    <!-- Architecture & Design -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-ruler-combined text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Architecture & Design</span>
+    </div>
+    
+    <!-- Construction -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-hard-hat text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Construction</span>
+    </div>
+    
+    <!-- Manufacturing -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-industry text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Manufacturing</span>
+    </div>
+    
+    <!-- Oil & Gas -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-gas-pump text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Oil & Gas</span>
+    </div>
+    
+    <!-- Energy & Utilities -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-bolt text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Energy & Utilities</span>
+    </div>
+    
+    <!-- Retail & Commerce -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-shopping-cart text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Retail & Commerce</span>
+    </div>
+    
+    <!-- Military -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-shield-alt text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Military</span>
+    </div>
+    
+    <!-- Travel & Tourism -->
+    <div class="flex flex-col items-center text-center hover:scale-105 transition-transform">
+      <i class="fas fa-plane text-4xl mb-2 text-blue-300"></i>
+      <span class="font-medium">Travel & Tourism</span>
+    </div>
   </div>
 </section>
 
-<section class="py-16 bg-primary text-white text-center">
+
+<!-- <section class="py-16 bg-primary text-white text-center">
   <h2 class="text-4xl font-bold mb-4">Become part of our vibrant community!</h2>
   <p>Admissions Open for 2025-26.</p>
   <a routerLink="/admissions" class="mt-6 inline-block bg-accent text-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition">Apply Now</a>
-</section>
+</section> -->
+

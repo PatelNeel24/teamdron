@@ -1,0 +1,39 @@
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Our Team</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        Meet the talented individuals behind our innovative projects and solutions.
+      </p>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div *ngFor="let member of teamMembers" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <!-- Team Member Image -->
+          <div class="h-64 overflow-hidden">
+            <img 
+              [src]="member.imageUrl || 'assets/images/team/placeholder.jpg'" 
+              [alt]="member.name"
+              class="w-full h-full object-cover"
+            >
+          </div>
+          
+          <!-- Team Member Info -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-1">{{ member.name }}</h3>
+            <p class="text-blue-600 font-medium mb-4">{{ member.role }}</p>
+            <p class="text-gray-600 mb-6">{{ member.description }}</p>
+            
+            <!-- Social Links -->
+            <div class="flex space-x-4" *ngIf="member.socialLinks">
+              <a *ngIf="member.socialLinks.linkedin" [href]="member.socialLinks.linkedin" target="_blank" class="text-gray-500 hover:text-blue-700">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a *ngIf="member.socialLinks.twitter" [href]="member.socialLinks.twitter" target="_blank" class="text-gray-500 hover:text-blue-400">
+                <i class="fab fa-twitter"></i>
+              </a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,6 +1,24 @@
-<div class="bg-white shadow-lg rounded-xl p-6 text-center hover:shadow-2xl transition">
-    <h3 class="text-2xl font-bold mb-4">{{ title }}</h3>
-    <p class="text-gray-600 mb-6">{{ description }}</p>
-    <a [routerLink]="link" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore</a>
+<div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition">
+  <!-- Image container with fixed aspect ratio -->
+  <div class="relative aspect-video w-full overflow-hidden"> <!-- 16:9 aspect ratio -->
+    <ng-container *ngIf="imagePath">
+      <img 
+        [src]="imagePath" 
+        [alt]="title" 
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+    </ng-container>
   </div>
   
+  <!-- Content area with flexible height -->
+  <div class="p-6 flex flex-col flex-grow">
+    <h3 class="text-2xl font-bold mb-4">{{ title }}</h3>
+    <p class="text-gray-600 mb-6 flex-grow">{{ description }}</p>
+    <!-- <a 
+      [routerLink]="link" 
+      class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition mt-auto"
+    >
+      Explore
+    </a> -->
+  </div>
+</div>

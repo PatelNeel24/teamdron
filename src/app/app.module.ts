@@ -12,6 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
+import { TeammembersComponent } from './teammembers/teammembers.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ModelViewerComponent
+    ModelViewerComponent,
+    TeammembersComponent
   ],
   imports: [
     BrowserModule,

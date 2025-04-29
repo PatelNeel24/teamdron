@@ -1,11 +1,24 @@
-<div class="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('/assets/banner.jpg')">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative text-center text-white z-10">
-      <h1 class="text-5xl font-bold mb-6">[College Name]</h1>
-      <p class="text-xl mb-6">Inspiring Minds, Transforming Futures</p>
+<div class="relative h-[90vh] w-full bg-cover bg-center" style="background-image: url('/assets/banner.jpg');background-color: #767c85;">
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  
+  <!-- Content container -->
+  <div class="relative z-10 h-full w-full flex flex-col md:flex-row items-center justify-between container mx-auto px-8">
+    
+    <!-- Text content (left side) -->
+    <div class="w-full md:w-1/2 text-white space-y-6" style="color: bisque;">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight">The leading platform<br>for 3D & AR on the web</h2>
+      <p class="text-lg md:text-xl">Manage your 3D assets. Distribute 3D & AR experiences.<br>Collaborate with others. Showcase your work.</p>
       
-<app-model-viewer></app-model-viewer>
-      <a routerLink="/about" class="bg-accent text-primary px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">Learn More</a>
+      <div class="flex space-x-4 mt-8">
+        <a href="#" class="bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition">JOIN FOR FREE</a>
+        <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition">SEE PLANS</a>
+      </div>
+    </div>
+    
+    <!-- Model viewer (right side) -->
+    <div class="w-full md:w-1/2 h-[60vh] md:h-full relative">
+      <app-model-viewer class="absolute inset-0 w-full h-full"></app-model-viewer>
     </div>
   </div>
-  
+</div>

@@ -1,0 +1,14 @@
+/* Add custom styles if needed */
+.team-member-card {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Ensure images maintain aspect ratio */
+  .team-member-image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
